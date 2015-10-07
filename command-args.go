@@ -38,5 +38,4 @@ func main() {
 	if len(args) > 0 {
 		fmt.Println("Flag arg: ", args[0])
 	}
-
 }
