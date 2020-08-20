@@ -27,7 +27,7 @@ func connect(c context.Context) error {
 	data := make(chan myData, 1)
 	tr := &http.Transport{}
 	htppClient := &http.Client{Transport: tr}
-	req, _ := http.Request("GET", myUrl, nil)
+	req, _ := http.NewRequest("GET", myUrl, nil)
 
 	go func() {
 		response, err := htppClient.Do(req)
